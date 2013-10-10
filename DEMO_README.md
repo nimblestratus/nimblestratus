@@ -24,7 +24,7 @@ The `build_demo.sh` script does the following:
 
 1. Install [pipework](https://github.com/jpetazzo/pipework) to `/opt/docker/bin`
 
-2. Create a docker container for the [docker registry](https://github.com/nimblestratus/docker-registry).  This fork specifies the location of the container images and uses it as a volume.  Then the container is started.  All of the containers used for the demo are held in the registry.  Pipework binds the container to port 5000.
+2. Create a docker container for the [docker registry](https://github.com/nimblestratus/docker-registry).  This fork specifies the location of the container images and uses it as a volume.  Then the container is started.  All of the containers used for the demo are held in the registry.  Expose port 5000.
 
 3. Build two vagrant virtualbox images:
    * Master Node
