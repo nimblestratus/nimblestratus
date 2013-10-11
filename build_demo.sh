@@ -22,3 +22,14 @@ REGISTRY=$(docker run -d -p 5000:5000 nimblestratus/docker-registry)
 
 echo Registry is running as $REGISTRY on port 5000
 
+echo Setting up vagrant
+
+echo "  Checking for vocker"
+x=`vagrant plugin list|grep vocker`
+if [[ "XX$x" == "XX" ]]; then
+    vagrant plugin install vocker
+else
+    echo "    Already installed"
+fi
+
+

@@ -26,7 +26,9 @@ The `build_demo.sh` script does the following:
 
 2. Create a docker container for the [docker registry](https://github.com/nimblestratus/docker-registry).  This fork specifies the location of the container images and uses it as a volume.  Then the container is started.  All of the containers used for the demo are held in the registry.  Expose port 5000.
 
-3. Build two vagrant virtualbox images:
+3. Create docker container for DNS 
+
+4. Build two vagrant virtualbox images:
    * Master Node
    * Worker Node
    
@@ -36,13 +38,13 @@ The `build_demo.sh` script does the following:
 	   * collectd
 	   * pipework
 
-4. Build logstash containers from Paul Czar's [logstash-demo](https://github.com/paulczar/docker-logstash-demo) base and place in registry.
+5. Build logstash containers from Paul Czar's [logstash-demo](https://github.com/paulczar/docker-logstash-demo) base and place in registry.
 
-5. Build [hipache](https://github.com/dotcloud/hipache) container and place in registry. This uses [](https://index.docker.io/u/samalba/hipache/) for the base.
+6. Build [hipache](https://github.com/dotcloud/hipache) container and place in registry. This uses [](https://index.docker.io/u/samalba/hipache/) for the base.
 
-6. Build collectd-graphite container using [lopter/collectd-graphite](https://index.docker.io/u/lopter/collectd-graphite/) as a base.
+7. Build collectd-graphite container using [lopter/collectd-graphite](https://index.docker.io/u/lopter/collectd-graphite/) as a base.
 
-7. Build master node container and add to registry.
+8. Build master node container and add to registry.
 
 
 # Running the Demo
